@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // switch case语句如果不加break 会从当前分支一直往后执行所有分支  直到遇到break或者代码执行完毕
+    var a = '1'
+    switch(a){
+        case '1':
+            console.log('字符串1')
+            // break;
+        case true:
+            console.log(true)
+            // break;
+        case 1:
+            console.log('数字1')
+            break;  
+        default:
+            console.log('啥都不是')      
+    }
+</script>
+</html>

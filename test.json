@@ -1,0 +1,10 @@
+{
+    "zifuchuan": "aaa" , 
+    "shuzi" : 1 ,
+    "buer" : true ,
+    "shuzu" : [1,2,3],
+    "duixiang" : {
+        "shuju1" : 1 ,
+        "shuju2" : "aaa"
+    }
+ }

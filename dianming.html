@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点名</title>
+</head>
+<body>
+    <button onclick="dianming()">点名</button>
+    <h1 id="nameBox"></h1>
+    <h6>已点名:</h6>
+    <p id="dianguole"></p>
+</body>
+<script>
+    
+    // 记录点击点名按钮的次数
+    var time = 0
+    // 定义点名的名单
+    var mingdan = ["白家林","曹灵芝","崔印海","杜梦茹","杜勇喜","段于太","范亚娟","扶斐斐","扶宇","高雅婷","韩洋丽","韩卓","何文鑫","贾云涛","李文华","李文文","李雪","林秀娟","刘东洋","刘腾飞","罗文静","吕春源","马超","乔景浩","秦纯洁","宋哲","宋政威","滕佳绪","王付燚","王绿","王梦成","王婷婷","严小龙","湛晓华","张博雅","张浩天","张梦","张起梁","张巧玲","张志强","赵文静","周帅岭","周硕","周朕元","朱顺利","竹磊","祝尊强","张豪","王冲霄","包亚森","于秋浩"]
+    
+    // 使用localStorage保存已点名的同学
+    var choosed = localStorage.getItem('dianguomingle') || '' // 容错运算
+    console.log(choosed)
+    // 将localStorage中的数据保存到显示已点名的元素中
+    document.getElementById('dianguole').innerText = choosed
+    // 将保存在localStorage中的名字删除
+    if(!!choosed){
+        var arr = choosed.split(',')
+        for(let i = 0;i<arr.length;i++){
+            for(let j=0;j<mingdan.length;j++){
+                if(arr[i] == mingdan[j]){
+                    mingdan.splice(j,1)
+                    break;
+                }
+            }
+        }
+    }
+    console.log(mingdan)
+
+    function giveName(){
+        // 随机生成 0-50 之间的数字
+        var num = Math.floor(Math.random()*mingdan.length)
+        // 将随机数字作为下标访问数组中的元素
+        var name = mingdan[num]
+
+        // 把某同学名字跳过
+        // if(name == "张巧玲"){
+        //     console.log(name)
+        //     name = giveName()
+        // }
+        return name
+    }
+    function dianming(){
+        //每点击一次点名按钮，就把 time 增加 1 用来记录点击次数
+        // ++time
+        // console.log(time) 
+        // // 使用余数找 3 的倍数
+        // // time % 3 == 0
+        // // 使用字符串的 includes 方法判断是否有 3
+        // // (time+'').includes('3')
+        // if(time % 3 == 0 || (time+'').includes('3')){
+        //     document.getElementById('nameBox').innerText = mingdan[3]
+        //     console.log(mingdan[3])
+        //     // 终止后续代码执行
+        //     return false
+        // }
+        var name = giveName()
+        // 将p标签内的名字取出
+        var n = document.getElementById('dianguole').innerText
+        // 将点过的名字从原始数据中删去
+        for(let i=0;i<mingdan.length;i++){
+            if(name == mingdan[i]){
+                mingdan.splice(i,1)
+                break
+            }
+        }
+        console.log(mingdan)
+
+        // 判断p标签内的名字是否包含本次取出的名字
+        if(n.includes(name)) alert(name,'点过了');
+        else {
+            // 将名字放在页面中显示
+            document.getElementById('nameBox').innerText = name
+            // 并将该名字放入已点名的标签内 （p）
+            document.getElementById('dianguole').innerText = n + ',' + name
+            var s = n + ',' + name
+            localStorage.setItem('dianguomingle',s)
+        }
+    }
+    
+</script>
+</html>

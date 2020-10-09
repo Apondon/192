@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom1</title>
+</head>
+<body>
+    <div class="divClass" id="divId" style="color:red;">
+        <div class="limiande">
+            inner
+            <div>...</div>
+        </div>
+        text
+        <span name='span'>span</span>
+    </div>
+    <span id="sp1">我是span</span>
+    <span id="sp2">我是span</span>
+    <!-- 我是注释节点 -->
+</body>
+<script>
+    // 通过标签类型来进行查找
+    // var divs = document.getElementsByTagName('div')
+    // console.log(divs)
+    // 第一个
+    // console.log(divs[0])
+    // 第二个
+    // console.log(divs[1])
+    // 通过id来进行查找
+    // var divId = document.getElementById('divId')
+    // console.log(divId)
+    // 通过class来进行查找
+    // var divClass = document.getElementsByClassName('limiande')
+    // console.log(divClass)
+    // 通过name来进行查找
+    // var spanName = document.getElementsByName('span')
+    // console.log(spanName)
+
+    // innerHtml与innerText
+    // var limiande = document.getElementsByClassName('limiande')[0]
+    // console.log(limiande.innerHTML)
+    // console.log(limiande.innerText)
+
+    var sp1 = document.getElementById('sp1')
+    var sp2 = document.getElementById('sp2')
+    // sp1.innerHTML = '我变了'
+    // sp2.innerText = '我也变了'
+    sp1.innerHTML = '<span style="color:blue;">我变了</span>'
+    sp2.innerText = '<span style="color:blue;">我也变了</span>'
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500px" height="300px"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+    ctx.strokeStyle = 'red'
+
+    ctx.moveTo(10,20)
+    ctx.lineTo(20,30)
+    ctx.stroke()
+
+    ctx.fillStyle = 'yellow'
+    ctx.fillRect(100,100,150,150)
+
+    ctx.strokeStyle = 'blue'
+    ctx.strokeRect(50,50,60,60)
+
+    ctx.fillStyle = '#4ac0e0'
+    ctx.strokeStyle = '#00a1fc'
+    ctx.font = "40px 黑体"
+    ctx.fillText(200,200,'111')
+    ctx.font = "30px 宋体"
+    ctx.strokeText(300,300,'222')
+</script>
+</html>

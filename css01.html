@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 内部样式表 -->
+    <style>
+        /*  
+            选择器{
+                样式名:样式值;
+                样式名:样式值;
+                样式名:样式值;
+            }
+        */
+        /* 通配符  选中页面中的所有元素 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <!-- 外部样式表 -->
+    <link rel="stylesheet" href="./css01.css">
+</head>
+<body>
+    <!-- 内联样式 -->
+    <div style="width: 100px; height: 100px; border:1px solid"></div>
+    <!-- id -->
+    <div id="div1">
+        <span>我是div1</span></div>
+    <!-- class -->
+    <div class="div2">我是div2</div>
+    <!-- 标签 -->
+    <span>我是span</span>
+    <!-- 父子 -->
+    <div class="div3"><span>我是span</span></div>
+    <!-- 块级 -->
+    <div class="blockEle">块级</div>
+    <div class="blockEle">块级</div>
+    <div class="blockEle">块级</div>
+    <!-- 行内元素 -->
+    <span class="inlineEle">行内</span>
+    <span class="inlineEle">行内</span>
+    <span class="inlineEle">行内</span>
+    <!-- 行块元素 -->
+    <input type="text">
+    <input type="text">
+
+    <!-- css3
+        1.选择器
+        2.边框，背景，文字，颜色
+        3.布局
+        4.盒模型
+        5.过渡和变化
+        6.动画
+        7.媒体查询
+    -->
+
+    <!-- 兼容 -->
+    <div class="jianrong"></div>
+</body>
+</html>

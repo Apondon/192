@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+         <!-- autocomplete  on/off 自动填充 -->
+        <input type="text" name="" id="" autocomplete="on">
+        <input type="submit" value="提交">
+    </form>
+    <br>
+    <!-- autofocus 自动获得焦点-->
+    <input type="text" autofocus="autofocus">
+    <br>
+    <!-- pattern 和正则搭配使用 规定输入内容的格式 -->
+    <form >
+        <input type="text" pattern="^[A-C]">
+        <input type="submit" value="提交">
+    </form>
+    <br>
+    <!-- placeholder  提示语 -->
+    <input type="text" placeholder="我是提示语">
+
+    <br>
+    <!-- max 最大值  min 最小值  step 步长 -->
+    <input type="number" max="10" min="0" step="3">
+    <br>
+
+    <!-- file类型的表单元素可以上传文件 multiple 属性可以支持多文件上传-->
+    <input type="file" name="" id="" >
+    <br>
+    <input type="file" name="" id="" multiple="multiple">
+    <br>
+
+    <!-- 复选框默认勾选 -->
+    <input type="checkbox"  checked="checked">
+
+    <!-- required  验证必填项-->
+    <form >
+        <input type="text" required="required">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

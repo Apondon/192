@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;}
+        html,body{width: 100%;height: 100%;}
+        .warp{
+            width: 1000px;
+            height: 600px;
+            background: lightgray;
+
+            column-count: 3;
+            column-fill: auto;
+        }
+        .title{
+            width: 100%;
+            height: 100px;
+            column-span: all;
+            text-align: center;
+            color: darkslateblue;
+        }
+        .c1,.c2,.c3{
+            height: 498px;
+            border: 1px solid;
+        }
+        .c1{
+            text-align: center;
+        }
+        .lf{
+            font-size: 14px;
+            text-align: left;
+        }
+        .mi{
+            width: 180px;
+            height: 100px;
+            margin: auto;
+        }
+        .st{
+            width: 220px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 24px;
+            background: dodgerblue;
+            color: #fff;
+            text-align: left;
+        }
+        .ltr,.ltb{
+            box-sizing: border-box;
+            width: 100%;
+            height: 199px;
+            font-size: 12px;
+        }
+        .ltr{
+            padding-right: 50%;
+            background: url(./timg.jpg) no-repeat top right;
+            background-size: 150px 180px;
+        }
+        .ltb{
+            padding-left: 50%;
+            background: url(./timg.jpg) no-repeat top left;
+            background-size: 150px 180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="title">
+            <h1 class="big">字大的标题</h1>
+            <h2 class="small">字小的标题</h2>
+        </div>
+        <div class="c1">
+            <p class="lf">
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+            </p>
+            <img class="mi" src="./timg.jpg" alt="" >
+            <h5 class="st">小标题</h5>
+            <p class="lf">
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+            </p>
+        </div>
+        <div class="c2">
+            <h5 class="st">小标题</h5>
+            <div class="ltr">
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+            </div>
+            <div class="ltb">
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+                文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一文字一
+            </div>
+        </div>
+        <div class="c3"></div>
+    </div>
+</body>
+</html>

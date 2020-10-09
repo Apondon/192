@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom2</title>
+</head>
+<body>
+    <div id="a" class="b" style="color:red">我是div</div>
+</body>
+<script>
+    // 找到对应的dom元素
+    var myDiv = document.getElementById('a')
+    console.log(myDiv)
+    // 获取id
+    console.log(myDiv.id)
+    // 获取class
+    console.log(myDiv.className)
+    // 获取样式
+    console.log(myDiv.style)
+   
+    console.log(myDiv.style.color)
+    myDiv.style.color = 'blue'
+
+    console.log(myDiv.attributes)
+
+    console.log(myDiv.getAttribute('id'))
+    myDiv.setAttribute('class','c')
+
+</script>
+</html>

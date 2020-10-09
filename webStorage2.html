@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var o = {
+        name:'张三',
+        age:18,
+        graduated:false
+    }
+    localStorage.setItem('person',o)
+    localStorage.setItem('person1',JSON.stringify(o))
+
+    console.log(localStorage.getItem('person1'))
+    console.log(JSON.parse(localStorage.getItem('person1')))
+    console.log(eval('('+localStorage.getItem('person1')+')'))
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;}
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+         /* @font-face引入字体 */
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./iconfont/iconfont.eot');
+            src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+                url('./iconfont/iconfont.woff2') format('woff2'),
+                url('./iconfont/iconfont.woff') format('woff'),
+                url('./iconfont/iconfont.ttf') format('truetype'),
+                url('./iconfont/iconfont.svg#iconfont') format('svg');
+        }
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 66px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ts{
+            /* x 光源在x轴偏移量  y 光源在y轴偏移量  blur 光源距离文字的距离（模糊度）  color 阴影颜色 */
+            text-shadow: 5px 4px 10px turquoise;
+        }
+        /* 单位 */
+        /* vh与vw 根据显示区域大小来计算*/
+        .testv{
+            width: 50vw;
+            height: 50vh;
+            background: tomato;
+        }
+        /* % 根据父级元素内容区域大小来计算 */
+        .testp{
+            width: 50%;
+            height: 50%;
+            background: blueviolet;
+        }
+       
+        /* 计算属性 */
+        /* .testc{
+            width: calc(50%-100);
+            height: 50%;
+            background: chartreuse;
+        } */
+    </style>
+</head>
+<body>
+    
+    <!-- <h1 class="ts">文字阴影</h1>
+    <p class="iconfont">
+        &#xe60c;狗
+        &#xe60d;
+        &#xe60e;
+        &#xe60f;
+        &#xe61d;
+    </p> -->
+
+    <div class="testv"></div>
+    <div class="testp"></div>
+
+    <!-- 计算属性 -->
+    <!-- <div class="testc"></div> -->
+</body>
+</html>

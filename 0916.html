@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script> 
+    // String 对象和 Array 对象的构造器属性都是 Function
+    String.constructor.name // "Function"
+    Array.constructor.name // "Function"
+    
+    // 向字符串对象的原型上绑定公有方法
+    String.prototype.sayHi = function(){console.log('我是字符串')}
+    
+    // 在字符串实例上使用绑定的公有方法
+    // '1111'.sayHi() // 我是字符串
+    
+    // 在数组对象的原型上绑定公有方法
+    Array.prototype.sayName = function(){console.log('我是数组')}
+    
+    // 在数组对象的实例上使用绑定的公有方法
+    // [].sayName() //我是数组
+    // [1,2,3].sayName() //我是数组
+   
+</script>
+</html>

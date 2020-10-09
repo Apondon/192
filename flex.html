@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;}
+        html,body{width: 100%;height: 100%;}
+        .father{
+            width: 100%;
+            height: 100%;
+            background: cornflowerblue;
+
+             /* display: flexbox;
+            display: -webkit-flex; */
+            display: flex;
+
+            /* flex-direction: column(纵向 上到下) / row(横向 左到右)
+                             / column-reverse (纵向 下到上) / row-reverse(横向 右到左) */
+            /* flex-direction: row-reverse; */
+
+            /* 横向布局 */
+            /* justify-content: center（居中） / flex-start(从开始位置排列  默认) /flex-end(从最后位置排列) 
+                space-around(平分剩余空间  前后留空) / space-between(平分剩余空间 前后不留空)
+            */
+            /* justify-content: space-between; */
+
+            /* 纵向 */
+            /* align-items: center（居中）/ flex-start (从开始位置排列  默认) / flex-end(从结束位置排列); */
+            /* align-items: flex-end; */
+
+            /* 内容溢出 */
+            /* flex-wrap: nowrap（不溢出 默认）/ wrap（溢出换行）/ wrap-reverse(溢出换行 且逆向排列); */
+            /* flex-wrap: wrap-reverse; */
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        /* 空间分配 1   平均分 */
+        .item1 , .item2 , .item3{
+            height: 100px;
+            border: 1px solid;
+            /* flex:1; */
+        }
+        /* 空间分配2   比例分 */
+        /* .item1{
+            flex:1;
+        }
+        .item2{
+            flex:2;
+        }
+        .item3{
+            flex:3;
+        } */
+
+        /* 空间分配3   分配剩余 */
+        .item1{
+            width: 100px;
+        }
+        .item2{
+            flex:1;
+        }
+        .item3{
+            width: 100px;
+        }
+
+        /* 单独设置某子元素的纵向位置  */
+        /* align-self: start（开始位置 默认值）/center(中间位置) / flex-end(结束位置); */
+        /* .son1{ 
+            align-self: flex-end; 
+        } */
+    </style>
+</head>
+<body>
+    <div class="father">
+
+        <!-- <div class="son son1">1</div>
+        <div class="son">2</div>
+        <div class="son">3</div> -->
+
+        <!-- div.son{$}*30 -->
+
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+       
+    </div>
+</body>
+</html>

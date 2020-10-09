@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // json
+    var j = {
+       "zifuchuan": "aaa" , 
+       "shuzi" : 1 ,
+       "buer" : true ,
+       "shuzu" : [1,2,3],
+       "duixiang" : {
+           "shuju1" : 1 ,
+           "shuju2" : "aaa"
+       }
+    }
+
+    // 枚举数据  i 每条数据的数据名   j json对象  j[i] 每条数据对应的值
+    for(let i in j){
+        console.log(i,j[i])
+    }
+
+    // 将json对象转换为字符串
+    var sty = JSON.stringify(j)
+
+    // 将json字符串转换为json对象
+    var pse = JSON.parse(sty)
+
+    // eval()  将字符串解析并执行  效率低，安全性差 不推荐使用
+    // eval("("+ sty +")" )
+</script>
+</html>

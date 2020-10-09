@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas"  width="1000px" height="400px" style="border: 1px solid;"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+
+    ctx.strokeStyle = '#4ac0e1'
+    ctx.lineWidth = 3
+    // H
+    ctx.moveTo(20,50)
+    ctx.lineTo(20,350)
+
+    ctx.moveTo(20,200)
+    ctx.lineTo(180,200)
+
+    ctx.moveTo(180,50)
+    ctx.lineTo(180,350)
+
+    // T
+    ctx.moveTo(220,50)
+    ctx.lineTo(380,50)
+
+    ctx.moveTo(300,50)
+    ctx.lineTo(300,350)
+    // M
+    ctx.moveTo(420,350)
+    ctx.lineTo(460,50)
+    ctx.lineTo(500,300)
+    ctx.lineTo(540,50)
+    ctx.lineTo(580,350)
+    // L
+    ctx.moveTo(620,50)
+    ctx.lineTo(620,350)
+    ctx.lineTo(780,350)
+    // 5
+    ctx.moveTo(980,50)
+    ctx.lineTo(820,50)
+    ctx.lineTo(820,200)
+    ctx.lineTo(980,200)
+    ctx.lineTo(980,350)
+    ctx.lineTo(820,350)
+
+
+    ctx.stroke()
+</script>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width:100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        body{
+            background: linear-gradient(40deg,rgb(119, 51, 230),rgb(68, 252, 252));
+        }
+        p{
+            margin:50px;
+            text-align: center;
+            font-size: 24px;
+            line-height: 60px;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <p id='myDate'></p>
+    <p id='myTime'></p>
+    <p id="myDay"></p>
+</body>
+<script>
+    setInterval(function(){
+        var myDate = new Date() //获取当前时间
+        // 获取年月日
+        var yr = myDate.getFullYear() // YYYY
+        var mt = myDate.getMonth()+1 // 0-11
+        var dy = myDate.getDate()   
+        // 对月和日进行补0    1-> 01  
+        if(mt<10) mt='0'+mt;
+        if(dy<10) dy='0'+dy;
+
+        // 获取时分秒
+        var hr = myDate.getHours() //
+        var mi = myDate.getMinutes()
+        var sc = myDate.getSeconds()
+        // 对时分秒进行补0
+        if(hr<10) hr='0'+hr;
+        if(mi<10) mi='0'+mi;
+        if(sc<10) sc='0'+sc;
+
+        // 把修改好的时间 拼接为  YYYY-MM-DD hh:mm:ss 的格式
+        var dstr = yr + '-' + mt +'-' +dy 
+        var tstr = hr +':' + mi + ':' +sc 
+        console.log(dstr)
+        console.log(tstr)
+
+        // 获取星期
+        var wk = myDate.getDay() //0-6
+        var s = '' //定义变量保存星期字符串
+        switch(wk){
+            case 0:
+                s='星期日'
+                break;
+            case 1:
+                s='星期一'
+                break;
+            case 2:
+                s='星期二'
+                break;
+            case 3:
+                s='星期三'
+                break;    
+            case 4:
+                s='星期四'
+                break;
+            case 5:
+                s='星期五'
+                break;
+            case 6:
+                s='星期六'
+                break;
+        }
+        // 将字符串填充到页面中
+        document.getElementById('myDate').innerText = dstr // 日期
+        document.getElementById('myTime').innerText = tstr // 时间
+        document.getElementById('myDay').innerText = s // 星期
+    },1000)
+    
+
+</script>
+</html>

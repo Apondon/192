@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id='inpuName' onchange="fn()">
+</body>
+<script>
+    function fn(){
+        var ele = document.getElementById('inpuName') //找到输入框
+        var val = ele.value //获取输入框中输入的内容
+        console.log(val)
+        var kongnicheng = ''  //保存所有的昵称用来检测是否重复
+        // 检测空昵称
+        if(val.includes(' ')){
+            alert('昵称中不能有空格')
+        }
+        // 不允许有','
+        else if(val.includes(',')){
+            alert('昵称中不能有逗号')
+        }
+        // 合法昵称
+        else{
+            
+            // 检测是否有重复昵称
+            if(kongnicheng.includes(val)){
+                alert('昵称已存在')
+            }else{
+                val +=','
+                kongnicheng += val //将昵称拼接到一起
+            }
+        }
+    }
+</script>
+</html>

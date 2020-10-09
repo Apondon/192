@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form >
+        <!-- 大一知识 -->
+        <!-- 默认  输入框 -->
+        <input type="text" onfocus="console.log('focus')" onblur="console.log('blur')" onchange="console.log('change')">
+        <br>
+        <!-- 复选 -->
+        <input type="checkbox"  onchange="console.log('change')">
+        <br>
+        <!-- 单选 使用name属性将单选框划分为一组-->
+        <input type="radio" name="aaa" id="">
+        <input type="radio" name="aaa" id="">
+        <br>
+        <!-- 下拉 -->
+        <select name="" id="sele" onchange="console.log('change')">
+            <option value="aaa">a</option>
+            <option value="bbb">b</option>
+        </select>
+        <br>
+        <!-- 文本输入区域  css的 resize 属性可以控制该元素放大缩小-->
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <br>
+        <!-- demo -->
+        单选题
+        <br>
+        <!-- label 可以扩大选区 -->
+        <label for="A">
+            <input type="radio" name="danxuan" id="A"> A
+        </label>
+        <input type="radio" name="danxuan" id=""> B
+        <input type="radio" name="danxuan" id=""> C
+        <input type="radio" name="danxuan" id=""> D
+
+        <br>
+        <!-- 大二知识 -->
+        <!-- 取色器 -->
+        <input type="color" name="" id="color">
+        <br>
+        <!-- 可拖拽的条 -->
+        <input type="range" name="" id="range">
+        <br>
+        <!-- 输入电子邮件 -->
+        <input type="email" name="" id="email">
+        <br>
+        <!-- 输入网站地址 -->
+        <input type="url" name="" id="">
+        <br>
+        <!-- 输入数字 -->
+        <input type="number" name="" id="">
+        <br>
+        <!-- 选择年月日 -->
+        <input type="date" name="" id="">
+        <br>
+        <!-- 选择年月 -->
+        <input type="month" name="" id="">
+        <br>
+        <!-- 选择年月日时分秒 浏览器支持度低-->
+        <!-- <input type="datetime" name="" id=""> -->
+        <br>
+        <!-- 选择小时分钟 -->
+        <input type="time" name="" id="">
+        <br>
+        <!-- 选择年月日时分 -->
+        <input type="datetime-local" name="" id="">
+        <br>
+        <!-- 选择某年第几周 -->
+        <input type="week" name="" id="">
+        <br>
+        <button onclick="getValue()">按钮</button>
+        <br>
+        <!-- 重置表单的值 -->
+        <input type="reset" value="zzzz">
+    </form>
+</body>
+<script>
+    function getValue(){
+        // var clr = document.getElementById('color').value
+        // console.log('clr')
+        // console.log(clr)
+        // var rge = document.getElementById('range').value
+        // console.log(rge)
+        // var eml = document.getElementById('email').value 
+        // console.log(eml)
+        console.log(document.getElementById('sele').value)
+
+    }
+</script>
+</html>

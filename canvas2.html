@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas{
+            border:1px solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000px" height="400px"></canvas>
+</body>
+<script>
+    var myCanvas = document.getElementById('myCanvas')
+    var ctx = myCanvas.getContext('2d')
+
+    // 引入图片
+    // 创建图片对象的实例
+    var img = new Image()
+    // 图片的地址
+    img.src = './timg.jpg'
+    // img对象加载完成后触发函数
+    img.onload = function(){
+        ctx.drawImage(img,0,0,500,300)   // img 图片对象  x x轴坐标  y y轴坐标 width 宽度 height 高度
+    }
+
+    /*
+    ctx.fillStyle = 'pink'
+    // 位移
+    // ctx.translate(100,100) // x,y
+    // 缩放
+    // ctx.scale(0.5,0.5) // x,y
+    // 旋转
+    ctx.rotate(45)
+    ctx.fillRect(10,10,150,20)
+    */
+    /*
+    // 线性渐变色 ctx.createLinearGradient(x,y,x1,y1)
+    // var grd = ctx.createLinearGradient(10,10,200,200)
+    // grd.addColorStop(0,'red')
+    // grd.addColorStop(1,'yellow')
+
+    // ctx.fillStyle = grd
+    // ctx.fillRect(10,10,200,200)
+
+    // 径向渐变  ctx.createRadialGradient(x1,y1,r1,x2,y2,r2)
+    var rgd = ctx.createRadialGradient(100,100,20,120,120,50)
+    rgd.addColorStop(0,'red')
+    rgd.addColorStop(1,'yellow')
+    ctx.fillStyle = rgd
+    ctx.fillRect(0,0,500,500)
+    */
+    /*
+    // 圆形
+    // 空心圆 ctx.arc(x,y,半径,开始角度,结束角度,方向)   方向 true 顺时针  false 逆时针
+    // ctx.strokeStyle = 'red'
+    // ctx.arc(100,100,50,0,Math.PI*2,false)
+    // ctx.stroke()
+    // 实心圆
+    ctx.strokeStyle = 'red'
+    ctx.arc(100,100,50,0,Math.PI*2,false)
+    ctx.fillStyle = 'red'
+    ctx.fill()
+    ctx.stroke()
+    // 曲线
+    // ctx.beginPath()
+    // ctx.strokeStyle = 'red'
+    // ctx.arc(100,100,50,Math.PI,Math.PI*2,false)
+    // ctx.stroke()
+    // ctx.closePath()
+    // ctx.beginPath()
+    // ctx.strokeStyle = 'blue'
+    // ctx.arc(200,200,50,Math.PI,Math.PI*2,true)
+    // ctx.stroke()
+    // ctx.closePath()
+    */
+
+    
+    
+    /*
+    // 字
+    // 空心  ctx.strokeText('text',x,y)
+    ctx.strokeStyle = '#00a1fc'
+    ctx.font = "30px 宋体"
+    ctx.fillText('canvas',200,200)
+
+    // 实心 ctx.fillText('text',x,y)
+    ctx.fillStyle = '#4ac0e0'
+    ctx.font = "40px 黑体"
+    ctx.strokeText('canvas',300,300)
+    */
+
+    /*
+    // 方块
+    // 空心 ctx.strokeRect(x,y,width,height)
+    ctx.strokeRect(10,10,100,50)
+    // 实心 ctx.fillRect(x,y,width,height)
+    ctx.fillStyle = 'pink'
+    ctx.fillRect(200,200,150,20)
+    */
+    /*
+    ctx.strokeStyle = 'red'
+    ctx.lineWidth = 3
+    ctx.beginPath()
+
+    ctx.moveTo(10,10)
+    ctx.lineTo(100,10)
+    ctx.lineTo(50,50)
+    ctx.lineTo(10,10)
+    // 修改填充颜色
+    ctx.fillStyle = 'pink'
+    // 填色
+    ctx.fill()
+    ctx.stroke()
+
+    ctx.closePath()
+
+    ctx.beginPath()
+
+    ctx.moveTo(100,100)
+    ctx.lineTo(200,100)
+    ctx.lineTo(150,150)
+    ctx.lineTo(100,100)
+
+    // 修改填充颜色
+    ctx.fillStyle = 'yellow'
+    // 填色
+    ctx.fill()
+    ctx.stroke()
+
+    ctx.closePath()
+    */
+    
+    
+</script>
+</html>

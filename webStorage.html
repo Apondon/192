@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    // sessionStorage  浏览器关闭之后自动清除
+    // 增/改  sessionStorage.setItem(name,value) 既可以新增数据也可以修改数据 
+    sessionStorage.setItem('person1','张三三') // 数据名,数据值
+    sessionStorage.setItem('person2','张四')
+    // 查 sessionStorage.getItem(name)  用来查找数据
+    document.write(sessionStorage.getItem('person1'))  
+
+    sessionStorage.setItem('person3','张三三3')
+    sessionStorage.setItem('person4','张三三4')
+    sessionStorage.setItem('person5','张三三5')
+    sessionStorage.setItem('person6','张三三6')
+    sessionStorage.setItem('person7','张三三7')
+    // 删 sessionStorage.removeItem(name) 删除单条数据  sessionStorage.clear()删除全部数据
+    sessionStorage.removeItem('person3') //删单个
+    // sessionStorage.clear() //删全部
+    */
+
+    // localStorage 浏览器关闭之后不清除
+    // 增/改  localStorage.setItem(name,value) 既可以新增数据也可以修改数据 
+    localStorage.setItem('person1','张三三') // 数据名,数据值
+    localStorage.setItem('person2','张四')
+    // 查 localStorage.getItem(name)  用来查找数据
+    document.write(localStorage.getItem('person1')) 
+    // 删 localStorage.removeItem(name) 删除单条数据  sessionStorage.clear()删除全部数据
+    localStorage.removeItem('person1') //删单个
+    localStorage.setItem('person3','张三三3')
+    localStorage.setItem('person4','张三三4')
+    localStorage.setItem('person5','张三三5')
+    localStorage.setItem('person6','张三三6')
+    localStorage.clear() //删全部
+</script>
+</html>

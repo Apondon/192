@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin:0; padding: 0; }
+        html{ width: 100%; height: 100%; }
+        /* 根选择器 */
+        /* :root{ background: blueviolet; } */
+
+        /* 对应第一段注释的html结构 */
+        /* 选中最后一个元素 */
+        /* p:last-child{ background: chartreuse; } */
+        /* 选中最后一个元素 */
+        /* p:first-child{ background: chartreuse; } */
+
+        /* 对应第二段注释的html结构 */
+        /* 只包含某一个子元素 */
+        /* p:only-child{  background: chartreuse; } */
+
+        /* 对应第三段注释的html结构 */
+        /* 选中该类子元素唯一同级元素 */
+        /* p:only-of-type{ background: chartreuse; } */
+
+        /* 对应第四段注释的html结构 */
+        /* 选择某一个下标对应的元素 */
+        /* p:nth-child(3){ background: chartreuse; } */
+
+        /* 选中没有内容的空标签 */
+        /* p:empty{ height: 100px;background: magenta; } */
+
+        /* 排除某些元素 */
+        p:not(:last-child){
+            background: mediumturquoise;
+        }
+    </style>
+</head>
+<body>
+    <!-- 选中最后一个元素 -->
+    <!-- <p>1</p>
+    <p>2</p>
+    <p>3</p>  -->
+   
+
+    <!-- 只包含某一个子元素  -->
+    <!-- <div>
+        <p>1</p>
+    </div>
+    <div>
+        <span>2</span>
+        <p>3</p>
+    </div> -->
+
+
+    <!-- 选中该类子元素唯一同级元素 -->
+    <!-- <div>
+        <p>1</p>
+    </div>
+    <div>
+        <p>2</p>
+        <p>3</p>
+    </div> -->
+
+    <!-- 选择某一个下标对应的元素 -->
+    <!-- <p>1</p>
+    <p>2</p>
+    <p>3</p> -->
+
+    <!-- 选中没有内容的空标签 -->
+    <!-- <p></p>
+    <p>1</p> -->
+
+    <!-- 排除某些元素 -->
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</body>
+</html>

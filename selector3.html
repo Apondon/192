@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        /* 验证 email 和 url 是否合法的样式 */
+        /* 合法 */
+        .vld:valid{
+            background: chartreuse;
+        }
+        /* 不合法 */
+        .vld:invalid{
+            background: red;
+        }
+
+        /* 验证数字是否超出范围 */
+        /* 范围内 */
+        .rge:in-range{
+            background: lightcyan;
+        }
+        /* 范围外 */
+        .rge:out-of-range{
+            background: lightpink;
+        }
+
+        /* 选择是否被禁用的元素 */
+        /* 禁用 */
+        .tabd:disabled{
+            background: lightpink;
+        }
+        /* 可用 */
+        .tabd:enabled{
+            background: lightsteelblue;
+        }
+        /* 选择必填表单 */
+        .rqd:required{
+            background: magenta;
+        }
+
+        /* 选择选中的复选框 */
+        .ckb:checked{
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        邮箱  <input type="email" name="" id="" class="vld">
+        <br>
+        url  <input type="url" name="" id="" class="vld">
+        <br>
+        数字  <input type="number" name="" id="" min="0" max="10" class="rge">
+        <br>
+        <input type="submit" value="提交">
+    </form>
+
+    <br>
+    <!-- disabled属性可以用来禁用输入框 -->
+    <input type="text" class="tabd">
+    <input type="text" disabled="disabled" class="tabd">
+    <br>
+
+    <!-- required 表示该表单必填 -->
+    <input type="text" class="rqd" required="required">
+    <input type="text" class="rqd">
+
+    <br>
+    <!-- checked 表示该元素被选中 -->
+    <label for="ckb1">
+        <input type="checkbox" class="ckb" id="ckb1"> 复选1
+    </label>
+    
+    <input type="checkbox" class="ckb"> 复选2
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom3</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="alert('我被点击了')">我是用来点击的div</div>
+    <div onmousemove="console.log('我移动了')">我是用来移动的div</div>
+
+    <label for="">change<input type="text" onchange="alert('我变了')"></label>
+    <br>
+    <label for="">获取焦点<input type="text" onfocus="console.log('获得焦点')"></label>
+    <br>
+    <label for="">失去焦点<input type="text" onblur="console.log('失去焦点')"></label>
+    <br>
+    <label for="">键按下<input type="text" onkeydown="console.log('键按下')"></label>
+    <br>
+    <label for="">键松开<input type="text" onkeyup="console.log('键松开')"></label>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .warp{
+            width: 300px;
+            height: 450px;
+            border:1px solid #000;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <h1>用户注册</h1>
+        <div>用户名：<input type="text" placeholder="请输入用户名" id="username"></div>
+        <div>密码：<input type="password" placeholder="请输入密码" id="password"></div>
+        <div>邮箱：<input type="text" placeholder="请输入邮箱" id="email"></div>
+        <div>手机号：<input type="text" placeholder="请输入手机号" id="mobile"></div>
+        <div>QQ：<input type="text" placeholder="请输入QQ" id="qq"></div>
+        <div>个人主页：<input type="text" placeholder="请输入个人主页地址" id="webAddress"></div>
+        <div>生日：<input type="date"></div>
+        <div>头像上传：<input type="file" ></div>
+        <input type="button" value="提交" onclick="submit()">
+    </div>
+</body>
+<script>
+    function getId(id){
+        return document.getElementById(id)
+    }
+    function submit(){
+        var un = getId('username').value
+        console.log(un)
+        var pd = getId('password').value
+        console.log(pd)
+
+
+        // !! 连续取反验证输入的字符串是否为空 
+        if(!!un){
+            if(un.length<3){
+                alert('用户名不能少于三位')
+            }
+        }else{
+            alert('用户名不能为空')
+        }
+
+        if(!!pd){
+            if(pd.length<6){
+                alert('密码不能少于六位')
+            }
+            if(pd.length>18){
+                alert('密码不能多于十八位')
+            }
+        }else{
+            alert('密码不能为空')
+        }
+    }
+    
+</script>
+</html>

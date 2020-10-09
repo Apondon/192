@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width:100%;
+            height: 100%;
+        }
+        .warp{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: whitesmoke;
+            position: relative;
+            box-sizing: border-box;
+            padding-top: 190px;
+        }
+        header{
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: cornflowerblue;
+        }
+        nav{
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            left: 0;
+            top: 150px;
+            background: firebrick;
+        }
+        main{
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            background: yellow;
+        }
+        section{
+            height: 1000px;
+        }
+        footer{
+            height: 100px;
+            background: turquoise;
+        }
+        /* 版心 */
+        .inner{
+            width: 1200px;
+            height: 100%;
+            border: 1px solid #fff;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <header>
+            <div class="inner"></div>
+        </header>
+        <nav>
+            <div class="inner"></div>
+        </nav>
+        <!-- main区域滚动 -->
+        <main>
+            <section>
+                <div class="inner"></div>
+            </section>
+            <footer>
+                <div class="inner"></div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

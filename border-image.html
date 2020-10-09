@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;}
+        div{
+            width: 100px;
+            height: 100px;
+            background: turquoise;
+            border:100px solid;
+            /* 加载一张图片作为边框图片 */
+            border-image-source: url(./timg.jpg);
+            /* 切割图片 */
+            border-image-slice: 10 ;
+            /* 图片显示的宽度 */
+            border-image-width: 10px;
+            /* 图片边框开始的位置 */
+            border-image-outset: 10px;
+           
+        }
+        .div1{
+            /* 图片边框拉伸 */
+            border-image-repeat:round;
+        }
+        .div2{
+            /* 图片边框拉伸 */
+            border-image-repeat:space;
+        }
+        .div3{
+            /* 图片边框拉伸 */
+            border-image-repeat:stretch;
+        }
+        .div4{
+            /* 图片边框拉伸 */
+            border-image-repeat:unset;
+        }
+        .div5{
+            /* 图片边框拉伸 */
+            border-image-repeat: repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">round</div>
+    <div class="div2">space</div>
+    <div class="div3">stretch</div>
+    <div class="div4">unset</div>
+    <div class="div5">repeat</div>
+    <div class="div6"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas{
+            border: 1px solid;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500px" height="350px"></canvas>
+</body>
+<script>
+    // 找到画布
+    var myCanvas = document.getElementById('myCanvas')
+    // 创建绘画场景
+    var ctx = myCanvas.getContext('2d')
+
+    // 找笔
+    // 颜色
+    ctx.strokeStyle = 'red'
+    // 粗细
+    ctx.lineWidth = '5px'
+
+    // 坐标系左上角为 (0,0)   向右向下递增
+    // 开始点
+    // ctx.moveTo(20,20)
+    // // 结束点
+    // ctx.lineTo(60,20)
+    ctx.moveTo(20,20)
+    ctx.lineTo(40,20)
+    ctx.lineTo(30,30)
+    ctx.lineTo(20,20)
+    // 作画指令
+    ctx.stroke()
+   
+</script>
+</html>

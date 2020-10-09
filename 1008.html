@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        html,body{width: 100%;height: 100%;}
+        /* max-device-width ：798px ;当前屏幕最大宽度
+          在屏幕大小为0-798px 之间显示
+          min-device-width ： 1080px;  当前屏幕最小宽度
+          屏幕尺寸大于 1080px 显示
+        */
+        /* 移动端设备 */
+        @media all and (max-device-width:798px) {
+            .warp{
+                width: 100%; height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .hd{
+                width: 100%;
+                height: 1.375rem;
+                background: slateblue;
+            }
+            .content{
+                width: 100%;
+                flex: 1;
+                overflow-y: auto;
+            }
+            .ft{
+                width: 100%;
+                height: 1.375rem;
+                background: crimson;
+                display: flex;
+            }
+            .btn{
+                height: 100%;
+                flex:1;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+            }
+            span.icon{
+                height: .9375rem;
+                line-height: .9375rem;
+                font-size: .78125rem;
+            }
+            .txt{
+                height: .4375rem;
+                line-height: .4375rem;
+                font-size: .1875rem;
+            }
+            
+            /* 步骤一，引入fontface */
+            /* 
+                ./   在当前目录下查找
+                。。/  返回上一级目录中查找
+             */
+            @font-face {
+                font-family: 'iconfont';
+                src: url('iconfont.eot');
+                src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+                    url('./iconfont/iconfont.woff2') format('woff2'),
+                    url('./iconfont/iconfont.woff') format('woff'),
+                    url('./iconfont/iconfont.ttf') format('truetype'),
+                    url('./iconfont/iconfont.svg#iconfont') format('svg');
+            }
+            /* 步骤二，设置文字使用方式 */
+            .iconfont {
+                font-family: "iconfont" !important;
+                font-size: .25rem;
+                font-style: normal;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+        }
+        /* 平板设备 */
+        @media all and (max-device-width:1080px) and (min-device-width : 798px){
+            body{color:red;}
+        }
+        /* pc端设备 */
+        @media all and (min-device-width : 1080px) {
+            body{color:cyan;}
+        }
+    </style>
+    <script>
+        (function(){
+            var dpr, rem, scale;
+            var docEl = document.documentElement;
+            var fontEl = document.createElement('style');
+            var metaEl = document.querySelector('meta[name="viewport"]');
+            dpr = window.devicePixelRatio || 1;
+            scale = 1 / parseInt(dpr);
+            rem = docEl.clientWidth * parseInt(dpr) / 10;
+            // 设置viewport，进行缩放，达到高清效果
+            metaEl.setAttribute('content', 'width=' + Number(parseInt(dpr) * docEl.clientWidth) + ',initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale + ',user-scalable=no');
+            // 设置data-dpr属性，留作的css hack之用
+            docEl.setAttribute('data-dpr', parseInt(dpr));
+            // 设置html的字体
+            var fon = 'font-size:' + rem + 'px';
+            docEl.setAttribute('style',fon );
+            // 动态写入样式
+            // docEl.firstElementChild.appendChild(fontEl);
+            // fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+            // 给js调用的，某一dpr下rem和px之间的转换函数
+            window.rem2px = function(v) {
+                v = parseFloat(v);
+                return v * rem;
+            };
+            window.px2rem = function(v) {
+                v = parseFloat(v);
+                return v / rem;
+            };
+            window.dpr = dpr;
+            window.rem = rem;
+        })()
+    </script>
+</head>
+<body>
+    <div class="warp">
+        <header class="hd"></header>
+        <div class="content">
+            <!-- br*99 -->
+        </div>
+        <footer class="ft">
+            <span class="btn">
+                <span class="icon iconfont">&#xe611;</span>
+                <span class="txt">猫爪</span>
+            </span>
+            <span class="btn">
+                <span class="icon iconfont">&#xe60d;</span>
+                <span class="txt">狗爪</span>
+            </span>
+            <span class="btn">
+                <span class="icon iconfont">&#xe612;</span>
+                <span class="txt">猫脸</span>
+            </span>
+            <span class="btn">
+                <span class="icon iconfont">&#xe60d;</span>
+                <span class="txt">狗爪</span>
+            </span>
+            <span class="btn">
+                <span class="icon iconfont">&#xe611;</span>
+                <span class="txt">猫爪</span>
+            </span>
+        </footer>
+    </div>
+</body>
+</html>

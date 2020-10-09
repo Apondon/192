@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 使用id选中元素 */
+        #div1{width: 100px; height: 100px;}
+        /* 使用class选中元素 */
+        .div1{color: red;}
+        .div11{ border: 1px solid #0f0;}
+        /* 子类 */
+        .div11 span{ color: blue;}
+        /* > */
+        /* .div11 > span{ color: blue;} */
+        /* 并集选择器 */
+        .div11 , p{ color:gold;}
+        /* 相邻选择器 */
+        .div11 + p{ color: lightblue;}
+        /* 范围选择器 */
+        .div11 ~ p{ color: lightcoral;}
+        /* 属性选择器 */
+        [abc=abc]{ font-size: 24px;}
+        /* 修饰符 匹配开始 ^ 以某串字符为开始 */
+        [abc^=abc]{ font-size: 24px; }
+        /* 修饰符 匹配结束 $ 以某串字符为结束 */
+        [abc$=cba]{ font-size: 48px; }
+        /* 修饰符 匹配中间任意 * 在中间任意位置匹配某字符 */
+        [abc*=bca]{ font-size: 48px; }  
+        /* 伪类 */
+        .p3:hover{ background: hotpink;}
+        .p3:active{ background: greenyellow;}
+        /* 将元素内第一个字符的样式做修改 */
+        .p2::first-letter{ font-size: 48px;}
+        /* before 之前   after 之后  */
+        /* 在元素内容之前增加内容 */
+        .div1::before{ content: '我在div1之前';  }
+       /* 在元素内容之后增加内容 */
+       .div1::after{ content: '我在div1之后';  }
+       /* 在元素被选中之后做一些样式修改 */
+       .p5::selection{ background: hotpink;}
+       /* 更改输入框中提示语的颜色 */
+       input::-webkit-input-placeholder{ color: lightblue;}
+    </style>
+</head>
+<body>
+    <p class="p3" abc="abc">567</p>
+    <p class="p4" abc="abcabc">6</p>
+    <p class="p5" abc="abccba">7</p>
+    <div id="div1" class="div1 div11">
+        1
+        <span>
+            2
+        </span>
+    </div>
+    <p class="p1">3</p>
+    <p class="p2">4ashdjkashdkjahdjhqidh</p>
+    <input type="text" placeholder="请输入内容">
+</body>
+</html>

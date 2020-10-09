@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body{
+            width:100%;
+            height: 100%;
+        }
+        header{
+            height: 150px;
+            background: cornflowerblue;
+        }
+        main{
+            height: 800px;
+            background: crimson;
+        }
+        footer{
+            height: 80px;
+            background: darkgrey;
+        }
+        .inner{
+            height: 100%;
+            width: 1200px;
+            margin: auto;
+            border: 1px solid #fff;
+            clear:both;
+        }
+        .lt,.md,.rt{
+            float:left;
+            height: 100%;
+        }
+        .lt,.rt{
+            width: 15%;
+            background: lightblue;
+        }
+        .md{
+            width: 70%;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner"></div>
+    </header>
+    <main>
+        <div class="inner">
+            <aside class="lt"></aside>
+            <section class="md"></section>
+            <aside class="rt"></aside>
+        </div>
+    </main>
+    <footer>
+        <div class="inner"></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div onclick="clickHandle()"></div>
+</body>
+<script>
+    function clickHandle(){
+        alert('点击了div')
+    }
+
+
+
+    // 具名函数
+    // function fn (a){
+    //     console.log(a)
+    // }
+    // fn() // 调用函数
+
+    // // 匿名函数
+
+    // // 匿名函数自执行
+    // (function (){
+    //     console.log('我是匿名函数')
+    // })()
+    // // 将匿名函数定义到变量中再调用
+    // var fn1 = function(){
+    //     console.log('我是匿名函数')
+    // }
+    // fn1() //调用函数
+
+    // 函数的参数 
+    // 参数可以写一个或者多个，也可以不写
+    // 写在函数小括号里的参数叫做函数的形参 （形式参数）
+    // 可以把形参理解成定义给函数的变量
+    // function fn(a,b,c){
+    //     console.log(a)
+    //     console.log(b)
+    //     console.log(c)
+    // }
+    // // 调用带参数的函数
+    // fn() // undefined undefined undefined
+    // // 在调用函数时候传入的参数叫做实参 （实际参数）
+    // fn(1,2,3) // 1 2 3
+
+    // // return 关键字
+    // // 可以将函数体内的值，返回到函数体外
+    // function foo(){
+    //     var abc = 1
+    // }
+    // // 无法访问函数内的abc
+    // foo() //执行函数foo
+    // abc // Uncaught ReferenceError: abc is not defined
+    // function bar(){
+    //     var abc = 1;
+    //     return abc;
+    // }
+    // bar() //执行函数bar
+    // // 无法访问函数内的abc
+    // abc // Uncaught ReferenceError: abc is not defined
+    // // 将函数执行结果保存在变量abc中
+    // var abc = bar() 
+    // // 可以访问函数内的abc
+    // abc // 1
+
+    // function yoo(){
+    //     function sum (a,b){
+    //         return a+b
+    //     }
+    //     var s = sum(1,2) // 使用变量s来保存函数sum的执行结果
+    //     console.log(s)
+    // }
+    // yoo() // 3
+
+    // 递归
+    // 求斐波那契数列第n项的值
+    // function fn(n){
+    //     if(n==2||n==1) return 1
+    //     return fn(n-1)+fn(n-2)
+    // }
+
+    // 函数高级特性 1.全局与局部
+
+    // var a = '我是全局的a'
+    // var b = '我是全局的b'
+
+    // function fn1(){
+    //     var a = '我是函数fn1中的a'
+    //     console.log(a)
+    //     console.log(b)
+    // }
+    // function fn2(){
+    //     var b = '我是函数fn2中的b'
+    //     console.log(b)
+    //     console.log(a)
+    // }
+
+    // 函数高级特性 2.作用域与作用域链
+    // var d = '全局的d'
+    // function fn1(){
+    //     console.log(d) // 可以访问
+    //     var a = 1
+    //     function fn2(){
+    //         console.log(a) // ?
+    //         console.log(d) //可以访问
+    //         var b =2
+    //         function fn3(){
+    //             console.log(a) // ?
+    //             console.log(b) // ?
+    //             console.log(d) //可以访问
+    //             var c = 3
+    //         }
+    //         fn3()
+    //     }
+    //     fn2()
+    //     console.log(c)
+    // }
+
+</script>
+</html>

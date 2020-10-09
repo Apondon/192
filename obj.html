@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+    // 工厂模式
+    function gongchang (yuanliao1,yuanliao2){
+        var o = new Object();
+        o.y1 = yuanliao1;
+        o.y2 = yuanliao2;
+        return o;
+    }
+    var o1 = gongchang(1,2)
+    var o2 = gongchang(3,4)
+    
+    // o1 // {y1: 1, y2: 2}
+    // o2 // {y1: 3, y2: 4}
+    
+    // o1.constructor.name //"Object"
+    // o2.constructor.name // "Object"
+    */
+
+    /*
+    // 构造函数模式
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        this.sayHi = function(){
+            
+        }
+    }
+    
+    var p1 = new Person() //生成person对象的实例
+    // p1 // Person {name: undefined, age: undefined}
+
+    var p2 = new Person('a',10) //生成person对象的实例
+    // p2 // Person {name: "a", age: 10}
+    
+   
+    // p1.constructor.name // "Person"
+    // p2.constructor.name // "Person"
+
+    // p1.sayHi == p2.sayHi // false 两个实例各存在一个私有方法 该方法在实例之间不共享
+    */
+    /*
+    // 创建有公共方法的对象
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        this.sayHi = fn; //将公有函数作为对象的属性进行赋值
+    }
+    function fn(){} //定义一个公有函数
+    var p1 = new Person() //生成person对象的实例
+    var p2 = new Person('a',10) //生成person对象的实例
+
+    // p1.sayHi == p2.sayHi // true 实例共享一个公共方法
+    */
+
+    /*
+    // 构造函数中写入默认值
+    function Person(name,age){
+
+        if(name === undefined) this.name = '张三';
+        else this.name = name;
+
+        if(age === undefined) this.age = 18;
+        else this.age = age;
+
+        this.sayHi = function(){
+            
+        }
+    }
+    */
+    /*
+    // 原型模式 
+    // prototype是对象的原型，原型上的属性和方法在该对象的实例中共享
+    function Proto () {
+        Proto.prototype.name =1;
+        Proto.prototype.fn = function(){}
+    }
+    var p1 = new Proto() //生成实例 p1
+    var p2 = new Proto() // 生成实例 p2
+    // p1.name == p2.name // true  两个实例共享name属性
+    // p1.fn == p2.fn //true   两个实例共享 fn 方法
+    //对象原型中的属性和方法发生改变，则实例的属性和方法同时改变
+    Proto.prototype.age = 100
+    // p1.age  // 100
+    // p2.age  // 100
+    Proto.prototype.age = 200
+    // p1.age  // 200
+    // p2.age  // 200
+    */
+
+    // 混合模式
+    function Person(name,age){
+        this.name = name;
+        this.age = age;
+        // 私有方法   实例化之后，在每个实例中私有
+        this.sayBye = function(){
+            console.log('bye')
+        }
+    }
+    // 公有方法  实例化之后，在每个实例中共享
+    Person.prototype.sayHi = function(){
+        console.log('hi')
+    }
+    var p1 = new Person('张三',18) // 生成对象的实例
+    var p2 = new Person('李四',19) // 生成对象的实例
+
+    // p1.sayBye == p2.sayBye // false
+    // p1.sayHi == p2.sayHi //true
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒泡排序</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr = [1,11,111,2,22,222]
+    // arr.sort() // [1, 11, 111, 2, 22, 222]
+    
+    // 列出数组中所有元素
+    for(let i=0;i<arr.length;i++){
+        // 将每个元素进行枚举
+        for(let j =0;j<arr.length;j++){
+            // console.log(arr[i],arr[j])
+            // 将相邻元素进行大小比较
+            if(arr[i]<arr[j]){
+                // 相邻元素进行值的交换
+                var n = arr[i]
+                arr[i] = arr[j]
+                arr[j] = n
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- audio video -->
+    <!-- src属性 需要加载的媒体文件的地址 -->
+    <!-- controls属性  打开音频和视频的操作台 -->
+    <!-- loop属性  可以让音频或者视频循环播放 -->
+    <video src="./oceans-clip.mp4" controls="controls" loop="true" >
+        你的浏览器不支持h5请升级浏览器
+    </video>
+    <br>
+    <!-- oncanplay 音频或者视频已经加载完成 可以进行播放了 -->
+    <!-- onplay 点击播放按钮触发 -->
+    <!-- onpause 点击暂停按钮触发 -->
+    <audio src="./单依纯 - 永不失联的爱 (Live).flac" 
+            controls="controls" 
+            loop="true"
+            oncanplay="console.log('可以播放了')"
+            onplay="console.log('播放')"
+            onpause="console.log('暂停')"
+            id="mySong"
+            >
+        你的浏览器不支持h5请升级浏览器
+    </audio>
+    <br>
+    <input type="button" value="按钮" onclick="fn()">
+</body>
+<script>
+    function fn(){
+        // 访问媒体的属性
+        // 1.找到元素
+        var song = document.getElementById('mySong')
+
+        // 2.获取元素属性
+        var v = song.volume   //音量
+        console.log('v')
+        console.log(v)
+        var ct = song.currentTime // 当前播放时长
+        console.log(ct)
+        var cs = song.currentSrc // 当前播放的文件的地址
+        console.log(cs)
+        var d = song.duration // 媒体时长
+        console.log(d)
+        var p = song.paused // 是否暂停播放
+        console.log(p)
+
+        
+    }
+   
+
+</script>
+</html>

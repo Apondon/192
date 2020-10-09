@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding:0;}
+        html,body{width: 100%; height: 100%; position: relative;}
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./iconfont/iconfont.eot');
+            src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+                url('./iconfont/iconfont.woff2') format('woff2'),
+                url('./iconfont/iconfont.woff') format('woff'),
+                url('./iconfont/iconfont.ttf') format('truetype'),
+                url('./iconfont/iconfont.svg#iconfont') format('svg');
+        }
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: .25rem;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        #hd{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 1.375rem;
+            background: aqua;
+        }
+        #box{
+            width: 100%;
+            height: 100%;
+            background: chartreuse;
+            box-sizing: border-box;
+            padding:1.375rem 0;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+        }
+        .sub{
+            width: 100px;
+            height: 100px;
+            border:1px solid #000;
+            margin: .156rem;
+            font-size: .3125rem;
+        }
+        #ft{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1.375rem;
+            background: aqua;
+        }
+        #ft span{
+            display: inline-block;
+            height: 1.375rem;
+            width: 25%;
+            font-size: .5rem;
+            line-height: 1.375rem;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+    <script>
+        (function(){
+            console.log(1);
+            var dpr, rem, scale;
+            var docEl = document.documentElement;
+            var fontEl = document.createElement('style');
+            var metaEl = document.querySelector('meta[name="viewport"]');
+            dpr = window.devicePixelRatio || 1;
+            scale = 1 / parseInt(dpr);
+            rem = docEl.clientWidth * parseInt(dpr) / 10;
+            // 设置viewport，进行缩放，达到高清效果
+            metaEl.setAttribute('content', 'width=' + Number(parseInt(dpr) * docEl.clientWidth) + ',initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale + ',user-scalable=no');
+            // 设置data-dpr属性，留作的css hack之用
+            docEl.setAttribute('data-dpr', parseInt(dpr));
+            // 设置html的字体
+            var fon = 'font-size:' + rem + 'px';
+            docEl.setAttribute('style',fon );
+            // 动态写入样式
+            // docEl.firstElementChild.appendChild(fontEl);
+            // fontEl.innerHTML = 'html{font-size:' + rem + 'px!important;}';
+            // 给js调用的，某一dpr下rem和px之间的转换函数
+            window.rem2px = function(v) {
+                v = parseFloat(v);
+                return v * rem;
+            };
+            window.px2rem = function(v) {
+                v = parseFloat(v);
+                return v / rem;
+            };
+            window.dpr = dpr;
+            window.rem = rem;
+        })()
+    </script>
+</head>
+<body>
+    <header id="hd"></header>
+    <section id="box">
+        <div class="container">
+            <div class="sub">1</div>
+            <div class="sub">2</div>
+            <div class="sub">3</div>
+            <div class="sub">4</div>
+            <div class="sub">5</div>
+            <div class="sub">6</div>
+            <div class="sub">7</div>
+            <div class="sub">8</div>
+            <div class="sub">9</div>
+            <div class="sub">10</div>
+        </div>
+    </section>
+    <footer id="ft">
+        <span class="iconfont">&#xe61c;</span>
+        <span class="iconfont">&#xe617;</span>
+        <span class="iconfont">&#xe615;</span>
+        <span class="iconfont">&#xe61d;</span>
+    </footer>
+</body>
+</html>
